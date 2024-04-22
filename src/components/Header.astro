@@ -38,17 +38,17 @@ const NAV_SECTIONS = [
       id="navMenu"
       class="fixed top-0 left-[-200%] bg-slate-900 bottom-0 w-full transition-[left] sm:static sm:w-auto sm:bg-transparent"
     >
-      <ul class="py-16 w-full flex flex-col gap-y-8 sm:gap-x-2 md:gap-x-4 sm:flex-row sm:py-0">
+      <ul class="py-24 w-full flex flex-col gap-y-8 sm:gap-x-2 md:gap-x-4 sm:flex-row sm:py-0">
         {
           NAV_SECTIONS.map((section) => (
             <li class="py-1 px-4 sm:py-0 sm:px-1">
               <a
-                class=" hover:text-green-500 text-2xl sm:text-base md:text-lg"
+                class=" hover:text-green-500 text-3xl sm:text-base md:text-lg"
                 href={section.href}
                 aria-label={section.label}
               >
                 <span class="flex items-center gap-x-2">
-                  <section.icon class="size-8 sm:size-6 stroke-1" />
+                  <section.icon class="size-7 sm:size-6 stroke-1" />
                   {section.label}
                 </span>
               </a>
