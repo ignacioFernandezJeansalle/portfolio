@@ -31,7 +31,7 @@ const NAV_SECTIONS = [
 ---
 
 <header class="fixed top-0 left-0 w-full z-10 h-14 bg-slate-900 border-b border-slate-700">
-  <nav class="max-w-5xl px-4 mx-auto h-full flex justify-between items-center">
+  <nav class="max-w-5xl px-8 mx-auto h-full flex justify-between items-center">
     <a class="text-3xl text-slate-300 font-semibold hover:text-green-500" href="/" aria-label="Ir al inicio">IFJ</a>
 
     <div
@@ -41,7 +41,7 @@ const NAV_SECTIONS = [
       <ul class="py-24 w-full flex flex-col gap-y-8 sm:gap-x-2 md:gap-x-4 sm:flex-row sm:py-0">
         {
           NAV_SECTIONS.map((section) => (
-            <li class="py-1 px-4 sm:py-0 sm:px-1">
+            <li class="py-1 px-8 sm:py-0 sm:px-1">
               <a
                 class=" hover:text-green-500 text-3xl sm:text-base md:text-lg"
                 href={section.href}
