@@ -1,33 +1,29 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Hero from "@sections/Hero.astro";
+import Experience from "@sections/Experience.astro";
 import Section from "@components/Section.astro";
 
-import Experience from "@icons/Experience.astro";
-import Projects from "@icons/Projects.astro";
-import About from "@icons/About.astro";
-import Contact from "@icons/Contact.astro";
-import ListItem from "@icons/ListItem.astro";
+import IconProjects from "@/icons/IconProjects.astro";
+import IconAbout from "@/icons/IconAbout.astro";
+import IconContact from "@/icons/IconContact.astro";
 ---
 
 <Layout title="Portfolio Ignacio Fernández Jeansalle" description="Desarrollador de software e interfaces de ususario">
   <main class="pt-12">
     <Hero />
-
-    <Section id="experiencia" class="py-16">
-      <h2 class="flex items-center gap-x-2 text-3xl"><Experience /> Experiencia</h2>
-    </Section>
+    <Experience />
 
     <Section id="proyectos" class="py-16">
-      <h2 class="flex items-center gap-x-2 text-3xl"><Projects />Proyectos</h2>
+      <h2 class="flex items-center gap-x-2 text-3xl"><IconProjects />Proyectos</h2>
     </Section>
 
     <Section id="sobre-mi" class="py-16">
-      <h2 class="flex items-center gap-x-2 text-3xl"><About />Sobre mí</h2>
+      <h2 class="flex items-center gap-x-2 text-3xl"><IconAbout />Sobre mí</h2>
     </Section>
 
     <Section id="contacto" class="py-16">
-      <h2 class="flex items-center gap-x-2 text-3xl"><Contact />Contacto</h2>
+      <h2 class="flex items-center gap-x-2 text-3xl"><IconContact />Contacto</h2>
     </Section>
   </main>
 </Layout>

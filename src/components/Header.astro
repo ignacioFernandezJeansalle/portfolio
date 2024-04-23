@@ -1,31 +1,31 @@
 ---
-import OpenMenu from "@icons/OpenMenu.astro";
-import CloseMenu from "@icons/CloseMenu.astro";
-import Experience from "@icons/Experience.astro";
-import Projects from "@icons/Projects.astro";
-import About from "@icons/About.astro";
-import Contact from "@icons/Contact.astro";
+import IconOpenMenu from "@/icons/IconOpenMenu.astro";
+import IconCloseMenu from "@/icons/IconCloseMenu.astro";
+import IconExperience from "@/icons/IconExperience.astro";
+import IconProjects from "@/icons/IconProjects.astro";
+import IconAbout from "@/icons/IconAbout.astro";
+import IconContact from "@/icons/IconContact.astro";
 
 const NAV_SECTIONS = [
   {
     label: "Experiencia",
     href: "/#experiencia",
-    icon: Experience,
+    icon: IconExperience,
   },
   {
     label: "Proyectos",
     href: "/#proyectos",
-    icon: Projects,
+    icon: IconProjects,
   },
   {
     label: "Sobre mí",
     href: "/#sobre-mi",
-    icon: About,
+    icon: IconAbout,
   },
   {
     label: "Contacto",
     href: "/#contacto",
-    icon: Contact,
+    icon: IconContact,
   },
 ];
 ---
@@ -57,13 +57,13 @@ const NAV_SECTIONS = [
         }
       </ul>
 
-      <button id="navBtnClose" class="absolute top-4 right-4 text-slate-300 hover:text-green-500 sm:hidden">
-        <CloseMenu />
+      <button id="navBtnClose" class="absolute top-4 right-8 text-slate-300 hover:text-green-500 sm:hidden">
+        <IconCloseMenu />
       </button>
     </div>
 
     <button id="navBtnOpen" class="text-slate-300 hover:text-green-500 sm:hidden">
-      <OpenMenu />
+      <IconOpenMenu />
     </button>
   </nav>
 </header>

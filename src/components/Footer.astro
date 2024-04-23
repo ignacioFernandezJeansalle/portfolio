@@ -1,7 +1,7 @@
 ---
 import { LINKS } from "@data/links";
-import Github from "@icons/Github.astro";
-import Linkedin from "@icons/Linkedin.astro";
+import IconGithub from "@icons/IconGithub.astro";
+import IconLinkedin from "@icons/IconLinkedin.astro";
 ---
 
 <footer class="border-t border-slate-700 py-10">
@@ -9,10 +9,10 @@ import Linkedin from "@icons/Linkedin.astro";
     <p>Ignacio Fernández Jeansalle</p>
     <article class="flex gap-x-6">
       <a href={LINKS.linkedin} target="_blank" aria-label="Ir al perfil de LinkedIn" rel="noopener">
-        <Linkedin class="size-6 hover:text-green-500 hover:scale-110" />
+        <IconLinkedin class="size-6 hover:text-green-500 hover:scale-110" />
       </a>
       <a href={LINKS.github} target="_blank" aria-label="Ir al perfil de GitHub" rel="noopener">
-        <Github class="size-6 hover:text-green-500 hover:scale-110" /></a
+        <IconGithub class="size-6 hover:text-green-500 hover:scale-110" /></a
       >
     </article>
   </section>
