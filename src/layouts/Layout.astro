@@ -1,4 +1,11 @@
 ---
+import "@fontsource-variable/jetbrains-mono"; // Supports weights 100-800
+import "@fontsource-variable/montserrat"; // Supports weights 100-900
+
+import Background from "@components/Background.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
 interface Props {
   title: string;
   description: string;
@@ -17,8 +24,11 @@ const { title, description } = Astro.props;
     <meta name="author" content="Ignacio Fernández Jeansalle" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
-  <body>
+  <body class="relative bg-slate-900 text-slate-50 text-base">
+    <Background />
+    <Header />
     <slot />
+    <Footer />
   </body>
 </html>
 
@@ -30,8 +40,12 @@ const { title, description } = Astro.props;
   }
 
   body {
-    font-family: system-ui, sans-serif;
-    background-color: #242424;
-    color: rgba(255, 255, 255, 0.85);
+    font-family: "Montserrat Variable", sans-serif, system-ui;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "JetBrains Mono Variable", monospace;
   }
 </style>
