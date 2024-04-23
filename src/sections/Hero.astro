@@ -1,5 +1,10 @@
 ---
+import { LINKS } from "@data/links";
 import Section from "@components/Section.astro";
+import Pill from "@components/Pill.astro";
+import Linkedin from "@icons/Linkedin.astro";
+import Github from "@icons/Github.astro";
+import Copy from "@icons/Copy.astro";
 ---
 
 <Section class="py-16 flex flex-col sm:flex-row justify-between items-center gap-12">
@@ -11,6 +16,24 @@ import Section from "@components/Section.astro";
       en HMI/SCADA de máquinas industriales y líneas de producción 🏭. <span class="text-green-500">+3 años</span> desarrollando
       software web 💻.
     </p>
+    <div class="flex flex-wrap gap-4 mt-8">
+      <Pill href={LINKS.linkedin} ariaLabel="Ir al perfil de LinkedIn">
+        <Linkedin class="size-4" />
+        <span>Linkedin</span>
+      </Pill>
+      <Pill href={LINKS.github} ariaLabel="Ir al perfil de GitHub">
+        <Github class="size-4" />
+        <span>Github</span>
+      </Pill>
+    </div>
+
+    <button
+      id="copy-to-clipboard"
+      class="mt-4 flex items-center gap-x-1 sm:gap-x-2 border border-slate-500 rounded-xl py-1 px-4 hover:text-green-500 hover:scale-105 h-full bg-slate-800 text-sm sm:text-base"
+    >
+      <Copy class="size-4" />
+      <span>{LINKS.gmail}</span>
+    </button>
   </div>
   <img
     src="/img/profile.webp"
@@ -18,3 +41,22 @@ import Section from "@components/Section.astro";
     class="size-36 sm:size-48 order-1 sm:order-2 drop-shadow-[0px_0px_8px_rgba(134,239,172,0.25)]"
   />
 </Section>
+
+<script>
+  const mail = "ignaciofj@gmail.com";
+  const $btnCopyToClipboard = document.getElementById("copy-to-clipboard");
+  const $spanText = $btnCopyToClipboard.getElementsByTagName("span");
+
+  const changeTextButton = () => {
+    $spanText[0].innerHTML = "Copiado ✅";
+    setTimeout(() => {
+      $spanText[0].innerHTML = mail;
+    }, 1000);
+  };
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(mail).then(changeTextButton);
+  };
+
+  $btnCopyToClipboard.addEventListener("click", copyToClipboard);
+</script>
