@@ -4,11 +4,11 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@sections/*": ["src/sections/*"],
-      "@components/*": ["src/components/*"],
-      "@data/*": ["src/data/*"],
-      "@icons/*": ["src/icons/*"]
+      "@/layouts/*": ["src/layouts/*"],
+      "@/sections/*": ["src/sections/*"],
+      "@/components/*": ["src/components/*"],
+      "@/data/*": ["src/data/*"],
+      "@/icons/*": ["src/icons/*"]
     }
   }
 }

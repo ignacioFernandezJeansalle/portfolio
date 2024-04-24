@@ -1,7 +1,7 @@
 ---
-import { LINKS } from "@data/links";
-import Section from "@components/Section.astro";
-import Pill from "@components/Pill.astro";
+import { LINKS } from "@/data/links";
+import Section from "@/components/Section.astro";
+import Pill from "@/components/Pill.astro";
 import IconLinkedin from "@/icons/IconLinkedin.astro";
 import IconGithub from "@/icons/IconGithub.astro";
 import IconCopy from "@/icons/IconCopy.astro";
@@ -12,7 +12,7 @@ import IconCopy from "@/icons/IconCopy.astro";
     <h1 class="text-2xl md:text-4xl mb-1">Ignacio Fernández Jeansalle</h1>
     <p class="text-xl md:text-2xl text-green-500 font-semibold text-balance">Desarrollador de software</p>
     <p class="text-base md:text-xl text-pretty mt-4">
-      <span class="text-green-500">+15 años</span> de experiencia como desarrollador de software de PLC y desarrollo UX/UI
+      <span class="text-green-500">+17 años</span> de experiencia como desarrollador de software de PLC y desarrollo UX/UI
       en HMI/SCADA de máquinas industriales y líneas de producción 🏭. <span class="text-green-500">+3 años</span> desarrollando
       software web 💻.
     </p>
@@ -29,7 +29,7 @@ import IconCopy from "@/icons/IconCopy.astro";
 
     <button
       id="copy-to-clipboard"
-      class="mt-4 flex items-center gap-x-1 sm:gap-x-2 border border-slate-500 rounded-xl py-1 px-4 hover:text-green-500 hover:scale-105 h-full bg-slate-800 text-sm sm:text-base"
+      class="mt-4 flex items-center gap-x-1 sm:gap-x-2 border border-gray-500 rounded-xl py-1 px-4 hover:text-green-500 hover:scale-105 h-full bg-gray-800 text-sm sm:text-base"
     >
       <IconCopy class="size-4" />
       <span>{LINKS.gmail}</span>
@@ -51,7 +51,7 @@ import IconCopy from "@/icons/IconCopy.astro";
     $spanText[0].innerHTML = "Copiado ✅";
     setTimeout(() => {
       $spanText[0].innerHTML = mail;
-    }, 1000);
+    }, 1500);
   };
 
   const copyToClipboard = () => {
