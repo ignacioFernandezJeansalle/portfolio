@@ -4,7 +4,6 @@ import Pill from "@/components/Pill.astro";
 
 import IconExperience from "@/icons/IconExperience.astro";
 import IconExperienceInd from "@/icons/IconExperienceInd.astro";
-import IconChevronLeft from "@/icons/IconChevronLeft.astro";
 import IconAstro from "@/icons/IconAstro.astro";
 import IconHTML from "@/icons/IconHTML.astro";
 import IconCSS from "@/icons/IconCSS.astro";
@@ -14,6 +13,7 @@ import IconTypeScript from "@/icons/IconTypeScript.astro";
 import IconGithubRepo from "@/icons/IconGithubRepo.astro";
 import IconLink from "@/icons/IconLink.astro";
 import IconBootstrap from "@/icons/IconBootstrap.astro";
+import ExperienceInd from "@/components/ExperienceInd.astro";
 
 const TAGS = {
   ASTRO: {
@@ -205,22 +205,5 @@ const INDUSTRIAL_WORKS = [
     <IconExperienceInd class="flex-shrink-0 size-6 sm:size-8" />
     <h2 class="text-2xl sm:text-3xl">Experiencia industrial</h2>
   </div>
-
-  {
-    INDUSTRIAL_WORKS.map((work) => (
-      <article class="flex flex-col gap-2 py-6">
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
-          <h3 class="text-lg text-green-500">{work.position}</h3>
-          <IconChevronLeft class="hidden sm:block" />
-          <h4 class="text-sm border rounded-xl border-gray-700 px-2 py-1">{work.company}</h4>
-        </div>
-        <span class="text-sm">{work.date}</span>
-        <ul class="list-disc pl-5">
-          {work.tasks.map((task) => (
-            <li>{task}</li>
-          ))}
-        </ul>
-      </article>
-    ))
-  }
+  {INDUSTRIAL_WORKS.map((work) => <ExperienceInd work={work} />)}
 </Section>
