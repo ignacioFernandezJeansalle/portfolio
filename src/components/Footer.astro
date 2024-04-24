@@ -1,19 +1,32 @@
 ---
 import { LINKS } from "@/data/links";
+import Section from "@/components/Section.astro";
 import IconGithub from "@/icons/IconGithub.astro";
 import IconLinkedin from "@/icons/IconLinkedin.astro";
+import IconAstro from "@/icons/IconAstro.astro";
+import IconTailwindCSS from "@/icons/IconTailwindCSS.astro";
 ---
 
-<footer class="border-t border-gray-700 py-10">
-  <section class="max-w-5xl px-8 mx-auto flex flex-col items-center gap-y-4 sm:flex-row sm:justify-between">
-    <p>Ignacio Fernández Jeansalle</p>
-    <article class="flex gap-x-6">
-      <a href={LINKS.linkedin} target="_blank" aria-label="Ir al perfil de LinkedIn" rel="noopener">
-        <IconLinkedin class="size-6 hover:text-green-500 hover:scale-110" />
-      </a>
-      <a href={LINKS.github} target="_blank" aria-label="Ir al perfil de GitHub" rel="noopener">
-        <IconGithub class="size-6 hover:text-green-500 hover:scale-110" /></a
-      >
+<footer class="border-t border-gray-700 pt-10 pb-20">
+  <Section>
+    <article class="flex flex-col items-center gap-y-4 sm:flex-row sm:justify-between">
+      <div class="flex gap-x-2">
+        <span class="flex gap-2 items-center px-3 py-1 bg-gray-800 text-gray-200 rounded-xl text-sm sm:text-base">
+          <IconAstro class="w-3 sm:w-4 h-auto" /> Astro
+        </span>
+        <span class="flex gap-2 items-center px-3 py-1 bg-gray-800 text-gray-200 rounded-xl text-sm sm:text-base">
+          <IconTailwindCSS class="w-3 sm:w-4 h-auto" /> TailwindCSS
+        </span>
+      </div>
+      <p class="text-green-500 font-semibold">Ignacio Fernández Jeansalle</p>
+      <div class="flex gap-x-6">
+        <a href={LINKS.linkedin} target="_blank" aria-label="Ir al perfil de LinkedIn" rel="noopener">
+          <IconLinkedin class="size-6 hover:text-green-500 hover:scale-110" />
+        </a>
+        <a href={LINKS.github} target="_blank" aria-label="Ir al perfil de GitHub" rel="noopener">
+          <IconGithub class="size-6 hover:text-green-500 hover:scale-110" /></a
+        >
+      </div>
     </article>
-  </section>
+  </Section>
 </footer>
