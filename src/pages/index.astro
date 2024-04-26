@@ -2,10 +2,10 @@
 import Layout from "@/layouts/Layout.astro";
 import Hero from "@/sections/Hero.astro";
 import Experience from "@/sections/Experience.astro";
+import AboutMe from "@/sections/AboutMe.astro";
 import Section from "@/components/Section.astro";
 
 import IconProjects from "@/icons/IconProjects.astro";
-import IconAbout from "@/icons/IconAbout.astro";
 import IconContact from "@/icons/IconContact.astro";
 ---
 
@@ -18,9 +18,7 @@ import IconContact from "@/icons/IconContact.astro";
       <h2 class="flex items-center gap-x-2 text-3xl"><IconProjects />Proyectos</h2>
     </Section>
 
-    <Section id="sobre-mi" class="py-16">
-      <h2 class="flex items-center gap-x-2 text-3xl"><IconAbout />Sobre mí</h2>
-    </Section>
+    <AboutMe />
 
     <Section id="contacto" class="py-16">
       <h2 class="flex items-center gap-x-2 text-3xl"><IconContact />Contacto</h2>
