@@ -2,21 +2,15 @@
 import Layout from "@/layouts/Layout.astro";
 import Hero from "@/sections/Hero.astro";
 import Experience from "@/sections/Experience.astro";
+import Projects from "@/sections/Projects.astro";
 import AboutMe from "@/sections/AboutMe.astro";
-import Section from "@/components/Section.astro";
-
-import IconProjects from "@/icons/IconProjects.astro";
 ---
 
 <Layout title="Portfolio Ignacio Fernández Jeansalle" description="Desarrollador de software e interfaces de ususario">
   <main class="pt-12">
     <Hero />
     <Experience />
-
-    <Section id="proyectos" class="py-16">
-      <h2 class="flex items-center gap-x-2 text-3xl"><IconProjects />Proyectos</h2>
-    </Section>
-
+    <Projects />
     <AboutMe />
   </main>
 </Layout>
