@@ -1,18 +1,94 @@
 ---
 import IconChevronLeft from "@/icons/IconChevronLeft.astro";
 
-const { work } = Astro.props;
-const { position, company, date, tasks } = work;
+const INDUSTRIAL_WORKS = [
+  {
+    position: "Ingeniero especialista",
+    company: "Siemens Mobility S.A.",
+    date: "[01.2023 - Presente]",
+    tasks: [
+      "Desarrollo de software de PLC y desarrollo UX/UI en SCADA para operación ferroviaria.",
+      `Desarrollé un <span class="text-emphasis">software llave en mano multiplataforma</span>.`,
+      "Elaboración de protocolos y ensayos del sistema.",
+      "Stack tecnológico: Siemens, Schneider Electric.",
+    ],
+  },
+  {
+    position: "Jefe de automatización",
+    company: "Prodigyo S.R.L.",
+    date: "[10.2021 - 12.2022]",
+    tasks: [
+      `Gestión del <span class="text-emphasis">departamento de programación</span>.`,
+      "Personas a cargo: 6.",
+      "Desarrollé indicadores del sector apoyado en el sistema de gestión Velneo.",
+    ],
+  },
+  {
+    position: "Líder de proyectos",
+    company: "Trend Ingeniería S.R.L.",
+    date: "[08.2012 - 09.2021]",
+    tasks: [
+      "Líder técnico en proyectos de sistemas de automatización industrial.",
+      "Personas a cargo según proyecto, entre 2 y 6.",
+      `Desarrollé <span class="text-emphasis">protocolos de ensayos</span> obteniendo casos de éxito de impacto en puesta en producción de 0hs.`,
+    ],
+  },
+  {
+    position: "Programador Senior",
+    company: "Trend Ingeniería S.R.L.",
+    date: "[08.2012 a 03.2017]",
+    tasks: [
+      "Desarrollo de soluciones y software de PLC, desarrollo UX/UI en HMI/SCADA industriales.",
+      "Supervisión de montaje, conexionado eléctrico y puesta en marcha de líneas de producción.",
+      `Elaboré <span class="text-emphasis">librerías de componentes</span> de PLC.`,
+      "Stack tecnológico: Schneider Electric, Rockwell Automation, Siemens.",
+      `Elaboré el <span class="text-emphasis">estándar de programación</span> del sector e impartí talleres de buenas prácticas de programación internos y a clientes.`,
+      `Elaboré el <span class="text-emphasis">procedimiento de ingeniería de software</span> del sector y se certificó conforme a las normativas ISO9001.`,
+    ],
+  },
+  {
+    position: "Programador SemiSenior",
+    company: "C-Net S.R.L.",
+    date: "[09.2009 - 06.2011]",
+    tasks: [
+      "Desarrollo de software de PLC y desarrollo UX/UI en HMI para Tenaris Siderca, Techint.",
+      "Stack tecnológico: Schneider Electric, Delphi.",
+      "Participé en la elaboración del estándar de programación de PLC.",
+      `Desarrollé el algoritmo de control de una línea de producción obteniendo un <span class="text-emphasis">700% de aumento de producción</span>.`,
+    ],
+  },
+  {
+    position: "Programador Junior",
+    company: "G-Flow S. A.",
+    date: "[10.2007 - 09.2009]",
+    tasks: [
+      "Desarrollo de software de PLC y desarrollo UX/UI en HMI para Ford, Volkswagen y Toyota.",
+      "Stack tecnológico: Rockwell Automation.",
+      "Elaboré librerías de componentes de PLC.",
+    ],
+  },
+];
 ---
 
-<article class="flex flex-col gap-2 py-6">
-  <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
-    <h3 class="text-lg text-emphasis-semibold">{position}</h3>
-    <IconChevronLeft class="hidden sm:block" />
-    <h4 class="text-sm border rounded-xl border-gray-700 px-2 py-1">{company}</h4>
-  </div>
-  <span class="text-sm">{date}</span>
-  <ul class="list-disc pl-5">
-    {tasks.map((task) => <li set:html={task} />)}
-  </ul>
-</article>
+{
+  INDUSTRIAL_WORKS.map(({ position, company, date, tasks }, index) => {
+    const classArticle =
+      index !== INDUSTRIAL_WORKS.length - 1 ? "flex flex-col gap-2 py-6" : "flex flex-col gap-2 pt-6";
+
+    return (
+      <article class={classArticle}>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+          <h3 class="text-lg text-emphasis-semibold">{position}</h3>
+          <IconChevronLeft class="hidden sm:block" />
+          <h4 class="text-sm border rounded-xl border-gray-700 px-2 py-1">{company}</h4>
+        </div>
+        <span class="text-sm">{date}</span>
+        <ul class="list-disc pl-5">
+          {tasks.map((task) => (
+            <li set:html={task} />
+          ))}
+        </ul>
+      </article>
+    );
+  })
+}
