@@ -4,5 +4,70 @@ import IconAboutMe from "@/icons/IconAboutMe.astro";
 ---
 
 <Section id="sobre-mi" class="py-16">
-  <h2 class="flex items-center gap-x-2 text-3xl"><IconAboutMe />Sobre mí</h2>
+  <div class="flex items-center gap-x-2">
+    <IconAboutMe class="flex-shrink-0 size-6 sm:size-8" />
+    <h2 class="text-2xl sm:text-3xl">Sobre mí</h2>
+  </div>
+
+  <article class="my-10 flex flex-col min-[850px]:flex-row gap-16 items-center justify-center">
+    <div class="flex flex-col gap-y-4">
+      <ul class="flex flex-col gap-y-1">
+        <li class="flex gap-x-2">
+          <span>👷‍♂️</span>
+          <span>
+            Licenciado en gestión de sistemas de automatización y robótica <span class="text-emphasis">#UNLZ</span>
+          </span>
+        </li>
+        <li class="flex gap-x-2">
+          <span>🧑‍💻</span>
+          <span>
+            Frontend React Developer <span class="text-emphasis">#Coderhouse</span> 🔝10
+          </span>
+        </li>
+
+        <li class="flex gap-x-2">
+          <span>🤿</span>
+          <span>
+            Instructor de buceo <span class="text-emphasis">#PADI</span>
+          </span>
+        </li>
+
+        <li></li>
+      </ul>
+      <p>
+        Comencé a programar en la escuela secundaria con los lenguajes C, C++ y Visual Basic. Profesionalmente me
+        desarrollé como programador de equipos industriales y líneas de producción, especializándome en el desarrollo de
+        software de PLC y desarrollo UX/UI en HMI/SCADA.
+      </p>
+      <p>
+        Durante este tiempo, creé <span class="text-emphasis">estándares de programación</span> y dicté talleres de <span
+          class="text-emphasis">buenas prácticas</span
+        > de programación, tanto para mis equipos como para clientes externos. Además, creé <span class="text-emphasis"
+          >procedimientos</span
+        > para el desarrollo de ingeniería de software industrial certificados conforme a las normativas <span
+          class="text-emphasis">ISO9001</span
+        >.
+      </p>
+      <p>
+        Lideré equipos multidisciplinarios de programación, electricidad y montaje en proyectos de renovación
+        tecnológica de gran envergadura, logrando minimizar el impacto en los procesos de puesta en marcha durante las
+        implementaciones con producción.
+      </p>
+      <p>
+        Comencé en 2019 en el <span class="text-emphasis">desarrollo web</span>, de manera autodidacta, desarrollando un
+        sitio para una escuela de buceo. Este logro personal me motivó a formalizar mis conocimientos mediante estudios
+        específicos en <span class="text-emphasis">desarrollo frontend</span>.
+      </p>
+      <p>
+        En el año 2009 conocí el buceo recreativo, y desde entonces me formé hasta convertirme en <span
+          class="text-emphasis">instructor de buceo</span
+        >.
+      </p>
+    </div>
+    <img
+      class="w-72 h-full grayscale-[40%] drop-shadow-[0px_0px_8px_rgba(134,239,172,0.25)] rounded-md"
+      src="/img/about-me.webp"
+      alt="Una foto mía buceando en Brasil"
+    />
+  </article>
 </Section>
