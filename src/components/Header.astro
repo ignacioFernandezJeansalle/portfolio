@@ -37,7 +37,7 @@ const NAV_SECTIONS = [
           NAV_SECTIONS.map((section) => (
             <li class="py-1 px-8 sm:py-0 sm:px-1">
               <a
-                class=" hover:text-green-500 text-3xl sm:text-base md:text-lg"
+                class="nav-sections hover:text-green-500 text-3xl sm:text-base md:text-lg"
                 href={section.href}
                 aria-label={section.label}
               >
@@ -66,16 +66,32 @@ const NAV_SECTIONS = [
   const $navMenu = document.getElementById("navMenu");
   const $navBtnOpen = document.getElementById("navBtnOpen");
   const $navBtnClose = document.getElementById("navBtnClose");
+  const $navSections = document.getElementsByClassName("nav-sections");
+
+  const openMenu = () => {
+    $navMenu?.classList.remove("left-[-200%]");
+    $navMenu?.classList.add("left-0");
+  };
+
+  const closeMenu = () => {
+    $navMenu?.classList.remove("left-0");
+    $navMenu?.classList.add("left-[-200%]");
+  };
 
   $navBtnOpen?.addEventListener("click", (event) => {
     event.stopPropagation();
-    $navMenu?.classList.remove("left-[-200%]");
-    $navMenu?.classList.add("left-0");
+    openMenu();
   });
 
   $navBtnClose?.addEventListener("click", (event) => {
     event.stopPropagation();
-    $navMenu?.classList.remove("left-0");
-    $navMenu?.classList.add("left-[-200%]");
+    closeMenu();
   });
+
+  for (let i = 0; i < $navSections.length; i++) {
+    $navSections[i].addEventListener("click", (event) => {
+      event.stopPropagation();
+      closeMenu();
+    });
+  }
 </script>
