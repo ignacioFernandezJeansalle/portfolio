@@ -4,28 +4,34 @@ import Section from "@/components/Section.astro";
 import IconGithub from "@/icons/IconGithub.astro";
 import IconLinkedin from "@/icons/IconLinkedin.astro";
 import IconAstro from "@/icons/IconAstro.astro";
+import IconReact from "@/icons/IconReact.astro";
 import IconTailwindCSS from "@/icons/IconTailwindCSS.astro";
 ---
 
 <footer class="border-t border-gray-700 pt-10 pb-20">
   <Section>
-    <article class="flex flex-col items-center gap-y-4 sm:flex-row sm:justify-between">
-      <div class="flex gap-x-2">
+    <article class="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
+      <div class="flex flex-wrap justify-center gap-2">
         <span class="flex gap-2 items-center px-3 py-1 bg-gray-800 text-gray-200 rounded-xl text-sm sm:text-base">
           <IconAstro class="w-3 sm:w-4 h-auto" /> Astro
+        </span>
+        <span class="flex gap-2 items-center px-3 py-1 bg-gray-800 text-gray-200 rounded-xl text-sm sm:text-base">
+          <IconReact class="w-3 sm:w-4 h-auto" /> React
         </span>
         <span class="flex gap-2 items-center px-3 py-1 bg-gray-800 text-gray-200 rounded-xl text-sm sm:text-base">
           <IconTailwindCSS class="w-3 sm:w-4 h-auto" /> TailwindCSS
         </span>
       </div>
-      <p class="text-emphasis-semibold">Ignacio Fernández Jeansalle</p>
-      <div class="flex gap-x-6">
-        <a href={LINKS.linkedin} target="_blank" aria-label="Ir al perfil de LinkedIn" rel="noopener">
-          <IconLinkedin class="size-6 hover:text-green-500 hover:scale-110" />
-        </a>
-        <a href={LINKS.github} target="_blank" aria-label="Ir al perfil de GitHub" rel="noopener">
-          <IconGithub class="size-6 hover:text-green-500 hover:scale-110" /></a
-        >
+      <div class="flex flex-col sm:flex-row flex-shrink-0 gap-4">
+        <p class="text-emphasis-semibold">Ignacio Fernández Jeansalle</p>
+        <div class="flex gap-4 justify-center">
+          <a href={LINKS.linkedin} target="_blank" aria-label="Ir al perfil de LinkedIn" rel="noopener">
+            <IconLinkedin class="size-6 hover:text-green-500 hover:scale-110" />
+          </a>
+          <a href={LINKS.github} target="_blank" aria-label="Ir al perfil de GitHub" rel="noopener">
+            <IconGithub class="size-6 hover:text-green-500 hover:scale-110" /></a
+          >
+        </div>
       </div>
     </article>
   </Section>
