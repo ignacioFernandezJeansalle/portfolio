@@ -94,7 +94,11 @@ const FRONTEND_WORKS = [
           <span class="text-sm border-b border-gray-700 pb-4">{date}</span>
           <p class="pt-1" set:html={description} />
           {descriptionImg && (
-            <img class="w-[160px] sm:w-[200px] h-auto rounded-md" src={descriptionImg} alt={descriptionImgAlt} />
+            <img
+              class="w-[160px] sm:w-[200px] h-auto aspect-[360/160] rounded-md"
+              src={descriptionImg}
+              alt={descriptionImgAlt}
+            />
           )}
           <ul class="flex flex-wrap gap-2">
             {tags.map((tag) => (

@@ -36,24 +36,26 @@ export default function GalleryCertification() {
         {
           <img
             key={active}
-            className="w-[500px] h-full rounded aspect-[500/389] animate-load-image"
+            className="w-[500px] h-full aspect-[500/389] rounded animate-load-image"
             src={CERTIFICATIONS[active].src}
             alt={CERTIFICATIONS[active].alt}
           />
         }
       </div>
-      <ul className="flex sm:flex-col gap-2 max-w-[500px] sm:max-w-[80px] md:max-w-[100px] sm:order-1">
+      <nav className="flex sm:flex-col gap-2 max-w-[500px] sm:max-w-[80px] md:max-w-[100px] sm:order-1">
         {CERTIFICATIONS.map(({ thumbnail, alt }, index) => (
-          <li key={index} className={index === active ? "" : "opacity-50 hover:opacity-100"} role="button">
-            <img
-              className="w-full h-auto rounded cursor-pointer"
-              src={thumbnail}
-              alt={alt}
-              onClick={() => handleClick(index)}
-            />
-          </li>
+          <img
+            key={index}
+            className={`w-full h-auto aspect-[500/389] rounded cursor-pointer ${
+              index === active ? "" : "opacity-50 hover:opacity-100"
+            }`}
+            src={thumbnail}
+            alt={alt}
+            onClick={() => handleClick(index)}
+            role="button"
+          />
         ))}
-      </ul>
+      </nav>
     </article>
   );
 }
