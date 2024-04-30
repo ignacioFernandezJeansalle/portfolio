@@ -4,18 +4,22 @@ const CERTIFICATIONS = [
   {
     src: "/img/certifications/202212 Coderhouse - Frontend React Js.webp",
     alt: "Certificado Coderhouse Carrera Frontend React Js - Clasificación Top 10",
+    thumbnail: "/img/certifications/202212 Coderhouse - Frontend React Js-thumbnail.webp",
   },
   {
     src: "/img/certifications/202211 Coderhouse - React Js.webp",
     alt: "Certificado Coderhouse React Js - Clasificación Top 10",
+    thumbnail: "/img/certifications/202211 Coderhouse - React Js-thumbnail.webp",
   },
   {
     src: "/img/certifications/202209 Coderhouse - Javascript.webp",
     alt: "Certificado Coderhouse Javascript - Clasificación Top 10",
+    thumbnail: "/img/certifications/202209 Coderhouse - Javascript-thumbnail.webp",
   },
   {
     src: "/img/certifications/202207 Coderhouse - Desarrollo web.webp",
     alt: "Certificado Coderhouse Desarrollo Web - Clasificación Top 10",
+    thumbnail: "/img/certifications/202207 Coderhouse - Desarrollo web-thumbnail.webp",
   },
 ];
 
@@ -39,11 +43,11 @@ export default function GalleryCertification() {
         }
       </div>
       <ul className="flex sm:flex-col gap-2 max-w-[500px] sm:max-w-[80px] md:max-w-[100px] sm:order-1">
-        {CERTIFICATIONS.map(({ src, alt }, index) => (
+        {CERTIFICATIONS.map(({ thumbnail, alt }, index) => (
           <li key={index} className={index === active ? "" : "opacity-50 hover:opacity-100"} role="button">
             <img
               className="w-full h-auto rounded cursor-pointer"
-              src={src}
+              src={thumbnail}
               alt={alt}
               onClick={() => handleClick(index)}
             />
