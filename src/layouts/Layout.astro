@@ -1,6 +1,12 @@
 ---
 import "@fontsource-variable/jetbrains-mono"; // Supports weights 100-800
 import "@fontsource-variable/montserrat"; // Supports weights 100-900
+import "@fontsource/roboto/100.css";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+import "@fontsource/roboto/900.css";
 
 import Background from "@/components/Background.astro";
 import Header from "@/components/Header.astro";
@@ -25,7 +31,7 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body class="relative bg-gray-950 text-gray-50 text-base">
-    <Background />
+    <!-- <Background /> -->
     <Header />
     <slot />
     <Footer />
@@ -46,7 +52,8 @@ const { title, description } = Astro.props;
   h1,
   h2,
   h3 {
-    font-family: "JetBrains Mono Variable", monospace;
+    /* font-family: "JetBrains Mono Variable", monospace; */
+    font-family: "Roboto", monospace;
   }
 
   .text-emphasis {
