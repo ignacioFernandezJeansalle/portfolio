@@ -1,5 +1,5 @@
 ---
-import { LINKS } from "@/data/links";
+import { LINKS } from "@/const/links";
 import Section from "@/components/Section.astro";
 import Pill from "@/components/Pill.astro";
 import IconLinkedin from "@/icons/IconLinkedin.astro";
@@ -8,9 +8,10 @@ import IconCopy from "@/icons/IconCopy.astro";
 import IconCV from "@/icons/IconCV.astro";
 ---
 
-<div class="min-h-svh bg-cblue-700">
-  <Section class="text-slate-50">
-    <header class="pt-40 sm:pt-48 flex flex-col sm:flex-row justify-between gap-6">
+<!-- <div class="min-h-svh bg-cblue-700"> -->
+<div class="bg-cblue-700">
+  <Section class="text-slate-50 pt-40 sm:pt-52 pb-20">
+    <header class="flex flex-col sm:flex-row justify-between gap-6">
       <div class="order-2 sm:order-1">
         <h1
           class="max-w-xl text-4xl min-[350px]:text-5xl min-[420px]:text-6xl min-[540px]:text-7xl min-[820px]:text-8xl font-light uppercase mb-4"
@@ -35,7 +36,7 @@ import IconCV from "@/icons/IconCV.astro";
         > desarrollando software web.
       </p>
     </main>
-    <footer class="pt-10 pb-20">
+    <footer class="pt-10">
       <nav class="flex flex-wrap gap-3">
         <Pill href={LINKS.linkedin} ariaLabel="Ir al perfil de LinkedIn" class="btn-primary">
           <IconLinkedin class="size-4" />
