@@ -30,7 +30,8 @@ const { title, description } = Astro.props;
     <meta name="author" content="Ignacio Fernández Jeansalle" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
-  <body class="relative bg-gray-950 text-gray-50 text-base">
+  <body class="relative bg-slate-50 text-slate-950 text-base">
+    <!-- <div class="w-full h-svh bg-cblue-700"></div> -->
     <!-- <Background /> -->
     <Header />
     <slot />
@@ -57,10 +58,20 @@ const { title, description } = Astro.props;
   }
 
   .text-emphasis {
-    @apply text-green-300;
+    @apply text-cblue-700;
   }
 
   .text-emphasis-semibold {
-    @apply font-semibold text-green-500;
+    @apply font-semibold text-cblue-700;
   }
+
+  /*
+  
+  white-primary     slate-50
+  white-secondary   slate-100
+  black-primary     slate-950
+  black-secondary   slate-900
+  blue              blue-700 u 800
+
+  */
 </style>

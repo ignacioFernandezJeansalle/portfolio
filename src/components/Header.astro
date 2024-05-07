@@ -30,20 +30,20 @@ const NAV_SECTIONS = [
 ];
 ---
 
-<header class="fixed top-0 left-0 w-full z-10 h-14 bg-gray-950 border-b border-gray-700">
-  <nav class="max-w-5xl px-8 mx-auto h-full flex justify-between items-center">
-    <a class="text-3xl text-gray-300 font-semibold hover:text-green-500" href="/" aria-label="Ir al inicio">IFJ</a>
+<header class="fixed top-0 left-0 w-full h-24 z-10 bg-cblue-700">
+  <nav class="max-w-5xl px-8 mx-auto h-full flex justify-between items-center text-slate-50">
+    <a class="text-3xl font-semibold hover:text-slate-300" href="/" aria-label="Ir al inicio">IFJ</a>
 
     <div
       id="navMenu"
-      class="fixed top-0 left-[-200%] bg-gray-950 bottom-0 w-full transition-[left] sm:static sm:w-auto sm:bg-transparent"
+      class="fixed top-0 left-[-200%] bottom-0 w-full bg-cblue-700 transition-[left] sm:static sm:w-auto"
     >
       <ul class="py-24 w-full flex flex-col gap-y-8 sm:gap-x-2 md:gap-x-4 sm:flex-row sm:py-0">
         {
           NAV_SECTIONS.map((section) => (
             <li class="py-1 px-8 sm:py-0 sm:px-1">
               <a
-                class="nav-sections hover:text-green-500 text-2xl sm:text-sm md:text-lg"
+                class="nav-sections hover:text-slate-300 text-2xl sm:text-sm md:text-lg"
                 href={section.href}
                 aria-label={section.label}
               >
@@ -57,16 +57,42 @@ const NAV_SECTIONS = [
         }
       </ul>
 
-      <button id="navBtnClose" class="absolute top-4 right-8 text-gray-300 hover:text-green-500 sm:hidden">
+      <button id="navBtnClose" class="absolute top-9 right-8 hover:text-slate-300 sm:hidden">
         <IconCloseMenu />
       </button>
     </div>
 
-    <button id="navBtnOpen" class="text-gray-300 hover:text-green-500 sm:hidden">
+    <button id="navBtnOpen" class="hover:text-slate-300 sm:hidden">
       <IconOpenMenu />
     </button>
   </nav>
 </header>
+
+<style>
+  header {
+    animation: header-scroll 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes header-scroll {
+    to {
+      @apply h-16 shadow shadow-cblue-800;
+    }
+  }
+
+  #navBtnClose {
+    animation: btn-close-scroll 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes btn-close-scroll {
+    to {
+      @apply top-5;
+    }
+  }
+</style>
 
 <script>
   const $navMenu = document.getElementById("navMenu");
