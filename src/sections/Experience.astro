@@ -1,6 +1,8 @@
 ---
+import { FRONTEND_WORKS } from "@/const/worksFrontEnd";
+
 import Section from "@/components/Section.astro";
-import ExperienceFE from "@/components/ExperienceFE.astro";
+import CardProjects from "@/components/CardProjects.astro";
 import ExperienceInd from "@/components/ExperienceInd.astro";
 
 import IconExperienceFE from "@/icons/IconExperienceFE.astro";
@@ -13,7 +15,7 @@ import IconExperienceInd from "@/icons/IconExperienceInd.astro";
     <h2 class="text-2xl sm:text-3xl">Experiencia frontend</h2>
   </div>
 
-  <ExperienceFE />
+  {FRONTEND_WORKS.map((element) => <CardProjects element={element} />)}
 
   <div class="flex items-center gap-x-2 mt-20 mb-4">
     <IconExperienceInd class="flex-shrink-0 size-6 sm:size-8" />

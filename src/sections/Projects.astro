@@ -1,152 +1,17 @@
 ---
+import { PROJECTS } from "@/const/projects";
+
 import Section from "@/components/Section.astro";
+import CardProjects from "@/components/CardProjects.astro";
+
 import IconProjects from "@/icons/IconProjects.astro";
-
-import Pill from "@/components/Pill.astro";
-
-import IconAstro from "@/icons/IconAstro.astro";
-import IconReact from "@/icons/IconReact.astro";
-import IconHTML from "@/icons/IconHTML.astro";
-import IconCSS from "@/icons/IconCSS.astro";
-import IconSASS from "@/icons/IconSASS.astro";
-import IconJavaScript from "@/icons/IconJavaScript.astro";
-import IconTypeScript from "@/icons/IconTypeScript.astro";
-import IconBootstrap from "@/icons/IconBootstrap.astro";
-import IconFirebase from "@/icons/IconFirebase.astro";
-import IconGithubRepo from "@/icons/IconGithubRepo.astro";
-import IconLink from "@/icons/IconLink.astro";
-
-const TAGS = {
-  REACT: {
-    name: "React",
-    icon: IconReact,
-  },
-  ASTRO: {
-    name: "Astro",
-    icon: IconAstro,
-  },
-  HTML: {
-    name: "HTML",
-    icon: IconHTML,
-  },
-  CSS: {
-    name: "CSS",
-    icon: IconCSS,
-  },
-  SASS: {
-    name: "SASS",
-    icon: IconSASS,
-  },
-  JAVASCRIPT: {
-    name: "JavaScript",
-    icon: IconJavaScript,
-  },
-  TYPESCRIPT: {
-    name: "TypeScript",
-    icon: IconTypeScript,
-  },
-  BOOTSTRAP: {
-    name: "Bootstrap",
-    icon: IconBootstrap,
-  },
-  FIREBASE: {
-    name: "Firebase",
-    icon: IconFirebase,
-  },
-};
-
-const PROJECTS = [
-  /* {
-    position: "Challenge Frontend",
-    company: "Mercadolibre",
-    date: "[01.2024]",
-    description: `<span class="text-emphasis">Challenge real para frontend.</span> Desarrollo de una aplicación frontend + API para búsqueda de productos e información de un producto seleccionado.`,
-    descriptionImg: "", // ********************************************** certificado ?????
-    descriptionImgAlt: "",
-    tags: [TAGS.REACT, TAGS.HTML, TAGS.CSS, TAGS.SASS, TAGS.JAVASCRIPT],
-    thumbnail: "",
-    thumbnailAlt: "",
-    repository: "https://github.com/ignacioFernandezJeansalle/examen-frontend-mercado-libre",
-    deploy: "",
-  }, */
-  {
-    position: "Desarrollo frontend React",
-    company: "Coderhouse",
-    date: "[10.2022 - 12.2022]",
-    description: `<span class="text-emphasis">Proyecto final.</span> Desarrollo de una SPA de un e-commerce para verder productos a elección del alumno.`,
-    descriptionImg: "", // ********************************************** certificado ?????
-    descriptionImgAlt: "Certificado de la carrera de Desarrollo Frontend React de Coderhouse",
-    tags: [TAGS.REACT, TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.FIREBASE],
-    thumbnail: "/img/mockups/black-and-store-coder-house.webp",
-    thumbnailAlt: "Captura de pantalla del deploy del proyecto",
-    repository: "https://github.com/ignacioFernandezJeansalle/CoderReactJSBlackandstore",
-    deploy: "https://coder-react-js-blackandstore.vercel.app/",
-  },
-];
 ---
 
-<Section id="proyectos" class="py-16">
+<Section id="proyectos" class="py-20">
   <div class="flex items-center gap-x-2">
     <IconProjects class="flex-shrink-0 size-6 sm:size-8" />
     <h2 class="text-2xl sm:text-3xl">Proyectos</h2>
   </div>
 
-  {
-    PROJECTS.map(
-      ({
-        position,
-        company,
-        date,
-        description,
-        descriptionImg,
-        descriptionImgAlt,
-        tags,
-        thumbnail,
-        thumbnailAlt,
-        repository,
-        deploy,
-      }) => (
-        <article class="mt-10 flex flex-col md:flex-row items-start gap-6 p-4 sm:p-6 bg-gray-900/60 border border-gray-700 rounded-md">
-          <div class="flex flex-col gap-4">
-            <h3 class="text-lg text-emphasis-semibold">{position}</h3>
-            <h4 class="text-sm w-fit border rounded-xl border-gray-700 px-2 py-1">{company}</h4>
-            <span class="text-sm border-b border-gray-700 pb-4">{date}</span>
-            <p class="pt-1" set:html={description} />
-            {descriptionImg && (
-              <img class="w-[160px] sm:w-[200px] h-auto rounded-md" src={descriptionImg} alt={descriptionImgAlt} />
-            )}
-            <ul class="flex flex-wrap gap-2">
-              {tags.map((tag) => (
-                <li class="flex gap-2 items-center px-3 py-1 bg-gray-800 text-gray-200 rounded-xl text-sm sm:text-base">
-                  <tag.icon class="w-3 sm:w-4 h-auto" /> {tag.name}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div class="flex-shrink-0">
-            <img
-              class="w-full md:w-[320px] min-[850px]:w-[400px] lg:w-[500px] h-auto aspect-video rounded-md"
-              src={thumbnail}
-              alt={thumbnailAlt}
-            />
-            <ul class="flex flex-wrap gap-4 mt-4">
-              <li>
-                <Pill href={repository} ariaLabel="Ir al repositorio de GitHub">
-                  <IconGithubRepo class="size-4" />
-                  <span>Repositorio</span>
-                </Pill>
-              </li>
-              <li>
-                <Pill href={deploy} ariaLabel="Visitar la web">
-                  <IconLink class="size-4" />
-                  <span>Web</span>
-                </Pill>
-              </li>
-            </ul>
-          </div>
-        </article>
-      )
-    )
-  }
+  {PROJECTS.map((element) => <CardProjects element={element} />)}
 </Section>
