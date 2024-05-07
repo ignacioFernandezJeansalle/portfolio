@@ -44,10 +44,10 @@ const TAGS = {
 
 const FRONTEND_WORKS = [
   {
-    position: "Desarrollo web freelance",
+    position: "Desarrollo web",
     company: "Atlántida Diving School",
     date: "[01.2024 - 04.2024]",
-    description: `<span class="text-emphasis">Refactorización del sitio.</span> La primera versión la realicé de manera autodidacta en el año 2019 utilizando HTML, CSS, JavaScript y PHP.<br /> En esta ocasión, me concentré en optimizar el rendimiento, semántica HTML, accesibilidad y SEO.`,
+    description: `<span class="text-emphasis">Refactorización del sitio.</span> La primera versión la realicé de manera autodidacta en el año 2019 utilizando HTML, CSS, JavaScript y PHP.<br /> En esta ocasión, me concentré en optimizar el rendimiento, semántica, accesibilidad y SEO.`,
     descriptionImg: "/img/mockups/atlantida-diving-school-lighthouse.webp",
     descriptionImgAlt: "Resultado de la evaluación de Lighthouse en Chrome",
     tags: [TAGS.ASTRO, TAGS.HTML, TAGS.CSS, TAGS.SASS, TAGS.JAVASCRIPT, TAGS.TYPESCRIPT],
@@ -57,7 +57,7 @@ const FRONTEND_WORKS = [
     deploy: "https://www.divingschool.com.ar/",
   },
   {
-    position: "Desarrollo web freelance",
+    position: "Desarrollo web",
     company: "Sobrenatural Nutrición",
     date: "[12.2022 - 01.2023]",
     description: `<span class="text-emphasis">Premio por TOP 10 en el curso de Desarrollo web de Coderhouse.</span> Realizamos el proyecto en equipo junto a alumnos de otros cursos de PM y UX/UI.`,
@@ -87,23 +87,23 @@ const FRONTEND_WORKS = [
       repository,
       deploy,
     }) => (
-      <article class="mt-10 flex flex-col md:flex-row items-start gap-6 p-4 sm:p-6 bg-gray-900/60 border border-gray-700 rounded-md">
-        <div class="flex flex-col gap-4">
-          <h3 class="text-lg text-emphasis-semibold">{position}</h3>
-          <h4 class="text-sm w-fit border rounded-xl border-gray-700 px-2 py-1">{company}</h4>
-          <span class="text-sm border-b border-gray-700 pb-4">{date}</span>
-          <p class="pt-1" set:html={description} />
+      <article class="mt-10 flex flex-col md:flex-row gap-6 p-4 sm:p-6 bg-slate-200 rounded">
+        <div class="flex flex-col">
+          <h3 class="text-6xl text-cblue-700 font-light mb-6 uppercase">{position}</h3>
+          <h4 class="text-sm w-fit rounded px-2 py-1 bg-slate-50 font-medium mb-2">{company}</h4>
+          <span class="text-sm border-b border-slate-400 pb-4">{date}</span>
+          <p class="pt-2 mb-6" set:html={description} />
           {descriptionImg && (
             <img
-              class="w-[160px] sm:w-[200px] h-auto aspect-[360/160] rounded-md"
+              class="w-[160px] sm:w-[200px] h-auto aspect-[360/160] rounded mb-10"
               src={descriptionImg}
               alt={descriptionImgAlt}
             />
           )}
           <ul class="flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <li class="flex gap-2 items-center px-3 py-1 bg-gray-800 text-gray-200 rounded-xl text-sm sm:text-base">
-                <tag.icon class="w-3 sm:w-4 h-auto" /> {tag.name}
+              <li class="flex gap-2 items-center px-3 py-1 bg-slate-300 rounded-full sm:text-sm">
+                <tag.icon class="w-3 h-auto" /> {tag.name}
               </li>
             ))}
           </ul>
@@ -111,24 +111,20 @@ const FRONTEND_WORKS = [
 
         <div class="flex-shrink-0">
           <img
-            class="w-full md:w-[320px] min-[850px]:w-[400px] lg:w-[500px] h-auto aspect-video rounded-md"
+            class="w-full md:w-[320px] min-[850px]:w-[400px] lg:w-[500px] h-auto aspect-video rounded"
             src={thumbnail}
             alt={thumbnailAlt}
           />
-          <ul class="flex flex-wrap gap-4 mt-4">
-            <li>
-              <Pill href={repository} ariaLabel="Ir al repositorio de GitHub">
-                <IconGithubRepo class="size-4" />
-                <span>Repositorio</span>
-              </Pill>
-            </li>
-            <li>
-              <Pill href={deploy} ariaLabel="Visitar la web">
-                <IconLink class="size-4" />
-                <span>Web</span>
-              </Pill>
-            </li>
-          </ul>
+          <nav class="flex flex-wrap justify-end gap-4 mt-8">
+            <Pill href={repository} ariaLabel="Ir al repositorio de GitHub" class="btn-secondary">
+              <IconGithubRepo class="size-4" />
+              <span>Repositorio</span>
+            </Pill>
+            <Pill href={deploy} ariaLabel="Visitar la web" class="btn-secondary">
+              <IconLink class="size-4" />
+              <span>Web</span>
+            </Pill>
+          </nav>
         </div>
       </article>
     )
