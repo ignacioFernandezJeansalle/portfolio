@@ -6,6 +6,7 @@ import IconHTML from "@/icons/IconHTML.astro";
 import IconJavaScript from "@/icons/IconJavaScript.astro";
 import IconReact from "@/icons/IconReact.astro";
 import IconSASS from "@/icons/IconSASS.astro";
+import IconTailwindCSS from "@/icons/IconTailwindCSS.astro";
 import IconTypeScript from "@/icons/IconTypeScript.astro";
 
 export const TAGS = {
@@ -40,6 +41,10 @@ export const TAGS = {
   SASS: {
     name: "SASS",
     icon: IconSASS,
+  },
+  TAILWINDCSS: {
+    name: "TailwindCSS",
+    icon: IconTailwindCSS,
   },
   TYPESCRIPT: {
     name: "TypeScript",
