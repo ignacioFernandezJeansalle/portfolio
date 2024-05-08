@@ -1,5 +1,6 @@
 ---
-import Pill from "./Pill.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import Pill from "@/components/Pill.astro";
 
 import IconGithubRepo from "@/icons/IconGithubRepo.astro";
 import IconLink from "@/icons/IconLink.astro";
@@ -39,9 +40,9 @@ const {
     <ul class="flex flex-wrap gap-2">
       {
         tags.map((tag) => (
-          <li class="flex gap-2 items-center px-3 py-1 bg-slate-300 rounded-full sm:text-sm">
+          <Pill class="bg-slate-300">
             <tag.icon class="w-3 h-auto" /> {tag.name}
-          </li>
+          </Pill>
         ))
       }
     </ul>
@@ -54,14 +55,14 @@ const {
       alt={thumbnailAlt}
     />
     <nav class="flex flex-wrap justify-end gap-4 mt-8">
-      <Pill href={repository} ariaLabel="Ir al repositorio de GitHub" class="btn-secondary">
+      <LinkButton href={repository} ariaLabel="Ir al repositorio de GitHub" class="btn-secondary">
         <IconGithubRepo class="size-4" />
         <span>Repositorio</span>
-      </Pill>
-      <Pill href={deploy} ariaLabel="Visitar la web" class="btn-secondary">
+      </LinkButton>
+      <LinkButton href={deploy} ariaLabel="Visitar la web" class="btn-secondary">
         <IconLink class="size-4" />
         <span>Web</span>
-      </Pill>
+      </LinkButton>
     </nav>
   </div>
 </article>
