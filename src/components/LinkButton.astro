@@ -1,0 +1,16 @@
+---
+const { id, class: classInput, type, href, arialLabel } = Astro.props;
+const className = `px-4 py-1 h-full w-fit flex items-center gap-x-1 sm:gap-x-2 rounded hover:scale-105 text-sm sm:text-base ${classInput ? classInput : ""}`;
+---
+
+{
+  type === "button" ? (
+    <button id={id} aria-label={arialLabel} class={className}>
+      <slot />
+    </button>
+  ) : (
+    <a id={id} href={href} target="_blank" aria-label={arialLabel} rel="noopener" class={className}>
+      <slot />
+    </a>
+  )
+}
