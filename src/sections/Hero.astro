@@ -1,14 +1,13 @@
 ---
 import { LINKS } from "@/const/links";
 import Section from "@/components/Section.astro";
-import Pill from "@/components/Pill.astro";
+import LinkButton from "@/components/LinkButton.astro";
 import IconLinkedin from "@/icons/IconLinkedin.astro";
 import IconGithub from "@/icons/IconGithub.astro";
 import IconCopy from "@/icons/IconCopy.astro";
 import IconCV from "@/icons/IconCV.astro";
 ---
 
-<!-- <div class="min-h-svh bg-cblue-700"> -->
 <div class="bg-cblue-700">
   <Section class="text-slate-50 pt-40 sm:pt-52 pb-20">
     <header class="flex flex-col sm:flex-row justify-between gap-6">
@@ -38,19 +37,23 @@ import IconCV from "@/icons/IconCV.astro";
     </main>
     <footer class="pt-10">
       <nav class="flex flex-wrap gap-3">
-        <Pill href={LINKS.linkedin} ariaLabel="Ir al perfil de LinkedIn" class="btn-primary">
+        <LinkButton href={LINKS.linkedin} ariaLabel="Ir al perfil de LinkedIn" class="btn-primary">
           <IconLinkedin class="size-4" />
           <span>Linkedin</span>
-        </Pill>
-        <Pill href={LINKS.github} ariaLabel="Ir al perfil de GitHub" class="btn-primary">
+        </LinkButton>
+        <LinkButton href={LINKS.github} ariaLabel="Ir al perfil de GitHub" class="btn-primary">
           <IconGithub class="size-4" />
           <span>Github</span>
-        </Pill>
-        <Pill href="/cv/CV Ignacio Fernández Jeansalle.pdf" ariaLabel="Ir al Curriculum Vitae" class="btn-primary">
+        </LinkButton>
+        <LinkButton
+          href="/cv/CV Ignacio Fernández Jeansalle.pdf"
+          ariaLabel="Ir al Curriculum Vitae"
+          class="btn-primary"
+        >
           <IconCV class="size-4" />
           <span>CV</span>
-        </Pill>
-        <Pill
+        </LinkButton>
+        <LinkButton
           id="copy-to-clipboard"
           class="btn-primary"
           type="button"
@@ -58,7 +61,7 @@ import IconCV from "@/icons/IconCV.astro";
         >
           <IconCopy class="size-4" />
           <span>{LINKS.gmail}</span>
-        </Pill>
+        </LinkButton>
       </nav>
     </footer>
   </Section>
