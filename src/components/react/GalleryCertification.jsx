@@ -22,9 +22,8 @@ export default function GalleryCertification() {
       </div>
       <nav className="flex sm:flex-col gap-2 max-w-[400px] sm:max-w-[80px] md:max-w-[100px] sm:order-1">
         {CERTIFICATIONS.map(({ thumbnail, alt }, index) => (
-          <div>
+          <div key={index}>
             <img
-              key={index}
               className={` block w-full h-auto aspect-[500/389] rounded cursor-pointer ${
                 index === active ? "" : "opacity-50 hover:opacity-100"
               }`}
