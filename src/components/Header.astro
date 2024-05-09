@@ -32,7 +32,7 @@ const NAV_SECTIONS = [
 
 <header class="fixed top-0 left-0 w-full h-24 z-10 bg-cblue-700">
   <nav class="max-w-5xl px-8 mx-auto h-full flex justify-between items-center text-slate-50">
-    <a class="text-3xl font-semibold hover:text-slate-300" href="/" aria-label="Ir al inicio">IFJ</a>
+    <a class="text-3xl font-semibold hover:text-yellow-300" href="/" aria-label="Ir al inicio">IFJ</a>
 
     <div
       id="navMenu"
@@ -43,7 +43,7 @@ const NAV_SECTIONS = [
           NAV_SECTIONS.map((section) => (
             <li class="py-1 px-8 sm:py-0 sm:px-1">
               <a
-                class="nav-sections hover:text-slate-300 text-2xl sm:text-sm md:text-lg"
+                class="nav-sections hover:text-yellow-300 text-2xl sm:text-sm md:text-lg"
                 href={section.href}
                 aria-label={section.label}
               >
@@ -57,12 +57,12 @@ const NAV_SECTIONS = [
         }
       </ul>
 
-      <button id="navBtnClose" class="absolute top-9 right-8 hover:text-slate-300 sm:hidden">
+      <button id="navBtnClose" class="absolute top-9 right-8 hover:text-yellow-300 sm:hidden">
         <IconCloseMenu />
       </button>
     </div>
 
-    <button id="navBtnOpen" class="hover:text-slate-300 sm:hidden">
+    <button id="navBtnOpen" class="hover:text-yellow-300 sm:hidden">
       <IconOpenMenu />
     </button>
   </nav>
