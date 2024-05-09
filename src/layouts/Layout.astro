@@ -8,7 +8,6 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "@fontsource/roboto/900.css";
 
-import Background from "@/components/Background.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 
@@ -31,8 +30,6 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body class="relative bg-slate-50 text-slate-950 text-base">
-    <!-- <div class="w-full h-svh bg-cblue-700"></div> -->
-    <!-- <Background /> -->
     <Header />
     <slot />
     <Footer />
@@ -57,21 +54,15 @@ const { title, description } = Astro.props;
     font-family: "Roboto", monospace;
   }
 
+  .btn-primary {
+    @apply bg-cblue-500 text-slate-50 hover:text-slate-200;
+  }
+
+  .btn-secondary {
+    @apply bg-slate-50 text-cblue-700 hover:text-cblue-800 font-medium;
+  }
+
   .text-emphasis {
-    @apply text-cblue-700;
+    @apply font-medium text-cblue-700;
   }
-
-  .text-emphasis-semibold {
-    @apply font-semibold text-cblue-700;
-  }
-
-  /*
-  
-  white-primary     slate-50
-  white-secondary   slate-100
-  black-primary     slate-950
-  black-secondary   slate-900
-  blue              blue-700 u 800
-
-  */
 </style>
