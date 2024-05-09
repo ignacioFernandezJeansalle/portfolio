@@ -1,9 +1,10 @@
 ---
 import { FRONTEND_WORKS } from "@/const/worksFrontEnd";
+import { INDUSTRIAL_WORKS } from "@/const/worksIndustrial";
 
 import Section from "@/components/Section.astro";
 import CardProjects from "@/components/CardProjects.astro";
-import ExperienceInd from "@/components/ExperienceInd.astro";
+import CardIndustrialWorks from "@/components/CardIndustrialWorks.astro";
 
 import IconExperienceFE from "@/icons/IconExperienceFE.astro";
 import IconExperienceInd from "@/icons/IconExperienceInd.astro";
@@ -22,5 +23,5 @@ import IconExperienceInd from "@/icons/IconExperienceInd.astro";
     <h2 class="text-2xl sm:text-3xl">Experiencia industrial</h2>
   </div>
 
-  <ExperienceInd />
+  {INDUSTRIAL_WORKS.map((element) => <CardIndustrialWorks element={element} />)}
 </Section>

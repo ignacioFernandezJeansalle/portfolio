@@ -1,7 +1,4 @@
----
-import IconChevronLeft from "@/icons/IconChevronLeft.astro";
-
-const INDUSTRIAL_WORKS = [
+export const INDUSTRIAL_WORKS = [
   {
     position: "Ingeniero especialista",
     company: "Siemens Mobility S.A.",
@@ -68,22 +65,3 @@ const INDUSTRIAL_WORKS = [
     ],
   },
 ];
----
-
-{
-  INDUSTRIAL_WORKS.map(({ position, company, date, tasks }) => (
-    <article class="mt-10 flex flex-col p-4 sm:p-6 bg-slate-200 rounded">
-      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 mb-4">
-        <h3 class="text-3xl text-cblue-700 font-light uppercase">{position}</h3>
-        <IconChevronLeft class="hidden sm:block" />
-        <h4 class="text-sm w-fit rounded px-2 py-1 bg-slate-50 font-medium">{company}</h4>
-      </div>
-      <span class="text-sm border-b border-slate-400 pb-2">{date}</span>
-      <ul class="list-disc pl-5 pt-2">
-        {tasks.map((task) => (
-          <li set:html={task} />
-        ))}
-      </ul>
-    </article>
-  ))
-}
