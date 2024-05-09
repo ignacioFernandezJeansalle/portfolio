@@ -24,7 +24,7 @@ const {
 
 <article class="mt-10 flex flex-col md:flex-row gap-6 p-4 sm:p-6 bg-slate-200 rounded">
   <div class="flex flex-col">
-    <h3 class="text-6xl text-cblue-700 font-light mb-6 uppercase">{position}</h3>
+    <h3 class="text-3xl sm:text-5xl lg:text-6xl text-cblue-700 font-light mb-6 uppercase">{position}</h3>
     <h4 class="text-sm w-fit rounded px-2 py-1 bg-slate-50 font-medium mb-2">{company}</h4>
     <span class="text-sm border-b border-slate-400 pb-4">{date}</span>
     <p class="pt-2 mb-6" set:html={description} />
@@ -50,7 +50,7 @@ const {
 
   <div class="flex-shrink-0">
     <img
-      class="w-full md:w-[320px] min-[850px]:w-[400px] lg:w-[500px] h-auto aspect-video rounded"
+      class="w-full md:w-[340px] min-[850px]:w-[400px] lg:w-[500px] h-auto aspect-video rounded"
       src={thumbnail}
       alt={thumbnailAlt}
     />
