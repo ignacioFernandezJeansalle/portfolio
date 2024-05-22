@@ -1,81 +1,107 @@
 ---
 import { LINKS } from "@/const/links";
 import Section from "@/components/Section.astro";
-import LinkButton from "@/components/LinkButton.astro";
+import LinkButtonHero from "@/components/LinkButtonHero.astro";
 import IconLinkedin from "@/icons/IconLinkedin.astro";
 import IconGithub from "@/icons/IconGithub.astro";
-import IconCopy from "@/icons/IconCopy.astro";
 import IconCV from "@/icons/IconCV.astro";
+import IconMail from "@/icons/IconMail.astro";
+import IconCopyCheck from "@/icons/IconCopyCheck.astro";
 ---
 
 <div class="bg-cblue-700">
-  <Section class="text-slate-50 pt-40 sm:pt-52 pb-20">
-    <header class="flex flex-col sm:flex-row justify-between gap-6">
-      <div class="order-2 sm:order-1">
-        <h1
-          class="max-w-xl text-4xl min-[350px]:text-5xl min-[420px]:text-6xl min-[540px]:text-7xl min-[820px]:text-8xl font-light uppercase mb-4"
-        >
-          Ignacio Fernández Jeansalle
-        </h1>
-        <p class="text-xs sm:text-lg tracking-[0.25rem] font-medium text-balance text-yellow-300 uppercase">
-          Desarrollador de software
-        </p>
-      </div>
-      <img
-        src="/img/profile.webp"
-        alt="Foto de perfil de Ignacio Fernández Jeansalle"
-        class="order-1 sm:order-2 size-20 min-[500px]:size-28 md:size-36 min-[830px]:size-40 min-[900px]:size-52 rounded"
-      />
+  <Section class="text-slate-50 pt-40 sm:pt-52 pb-20 hero-grid">
+    <header>
+      <h1
+        class="max-w-xl text-[44px] leading-none min-[350px]:text-5xl min-[420px]:text-6xl min-[540px]:text-7xl min-[730px]:text-8xl font-light uppercase mb-4"
+      >
+        Ignacio Fernández Jeansalle
+      </h1>
+      <p class="text-xs sm:text-sm md:text-lg tracking-[0.25rem] font-medium text-balance text-yellow-300 uppercase">
+        Desarrollador de software
+      </p>
     </header>
-    <main class="pt-12 sm:pt-20">
-      <p class="max-w-2xl text-base md:text-xl text-pretty">
+    <main class="pt-4 sm:pt-8">
+      <p class="max-w-2xl mr-0 sm:mr-12 text-base md:text-xl text-pretty">
         <span class="text-yellow-300 font-medium">+17 años</span> de experiencia como desarrollador de software de PLC y
         desarrollo UX/UI en HMI/SCADA de máquinas industriales y líneas de producción. <span
           class="text-yellow-300 font-medium">+3 años</span
         > desarrollando software web.
       </p>
     </main>
-    <footer class="pt-10">
-      <nav class="flex flex-wrap gap-3">
-        <LinkButton href={LINKS.linkedin} ariaLabel="Ir al perfil de LinkedIn" class="btn-primary">
-          <IconLinkedin class="size-4" />
-          <span>Linkedin</span>
-        </LinkButton>
-        <LinkButton href={LINKS.github} ariaLabel="Ir al perfil de GitHub" class="btn-primary">
-          <IconGithub class="size-4" />
-          <span>Github</span>
-        </LinkButton>
-        <LinkButton
+    <footer class="pt-12 sm:pt-0">
+      <nav class="flex flex-wrap sm:flex-col sm:items-end gap-2">
+        <LinkButtonHero href={LINKS.linkedin} ariaLabel="Ir al perfil de LinkedIn" class="btn-primary">
+          <IconLinkedin class="size-5 sm:size-8" />
+        </LinkButtonHero>
+        <LinkButtonHero href={LINKS.github} ariaLabel="Ir al perfil de GitHub" class="btn-primary">
+          <IconGithub class="size-5 sm:size-8" />
+        </LinkButtonHero>
+        <LinkButtonHero
           href="/cv/CV Ignacio Fernández Jeansalle.pdf"
           ariaLabel="Ir al Curriculum Vitae"
           class="btn-primary"
         >
-          <IconCV class="size-4" />
-          <span>CV</span>
-        </LinkButton>
-        <LinkButton
+          <IconCV class="size-5 sm:size-8" />
+        </LinkButtonHero>
+        <LinkButtonHero
           id="copy-to-clipboard"
           class="btn-primary"
           type="button"
           ariaLabel="Copiar dirección de correo electrónico al portapapeles"
         >
-          <IconCopy class="size-4" />
-          <span>{LINKS.gmail}</span>
-        </LinkButton>
+          <IconMail class="size-5 sm:size-8" />
+          <IconCopyCheck class="size-5 sm:size-8 hidden" />
+        </LinkButtonHero>
       </nav>
     </footer>
   </Section>
 </div>
 
+<style>
+  .hero-grid {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    gap: 32px;
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  @media (width >= 640px) {
+    .hero-grid {
+      display: grid;
+      grid-template-areas:
+        "header footer"
+        "main footer";
+    }
+  }
+</style>
+
 <script>
   const mail = "ignaciofj@gmail.com";
   const $btnCopyToClipboard = document.getElementById("copy-to-clipboard");
-  const $spanText = $btnCopyToClipboard.getElementsByTagName("span");
+  const $svg = $btnCopyToClipboard.getElementsByTagName("svg");
 
   const changeTextButton = () => {
-    $spanText[0].innerHTML = "Copiado ✅";
+    $svg[0].classList.toggle("hidden");
+    $svg[1].classList.toggle("hidden");
+
     setTimeout(() => {
-      $spanText[0].innerHTML = mail;
+      $svg[0].classList.toggle("hidden");
+      $svg[1].classList.toggle("hidden");
     }, 1500);
   };
 
