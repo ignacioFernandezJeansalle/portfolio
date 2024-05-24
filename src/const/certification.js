@@ -5,6 +5,11 @@ export const CERTIFICATIONS = [
     thumbnail: "/img/certifications/202212 Coderhouse - Frontend React Js-thumbnail.webp",
   },
   {
+    src: "/img/certifications/202405 freeCodeCapm - Back End Development and APIs.webp",
+    alt: "Certificado freeCodeCamp Desarrollo Back End y APIs",
+    thumbnail: "/img/certifications/202405 freeCodeCapm - Back End Development and APIs-thumbnail.webp",
+  },
+  {
     src: "/img/certifications/202211 Coderhouse - React Js.webp",
     alt: "Certificado Coderhouse React Js - Clasificación Top 10",
     thumbnail: "/img/certifications/202211 Coderhouse - React Js-thumbnail.webp",
