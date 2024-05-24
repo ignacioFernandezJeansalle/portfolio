@@ -10,17 +10,10 @@ export default function GalleryCertification() {
 
   return (
     <article className="mt-10 flex flex-col sm:flex-row items-center sm:items-start sm:justify-center gap-4 p-4 sm:p-10 bg-slate-200 border rounded">
-      <div className="sm:order-2">
-        {
-          <img
-            key={active}
-            className="w-[500px] h-full aspect-[500/389] rounded animate-load-image"
-            src={CERTIFICATIONS[active].src}
-            alt={CERTIFICATIONS[active].alt}
-          />
-        }
+      <div className="sm:order-2 max-w-[500px] h-full aspect-[500/389]">
+        {<img className="rounded" src={CERTIFICATIONS[active].src} alt={CERTIFICATIONS[active].alt} />}
       </div>
-      <nav className="flex sm:flex-col gap-2 max-w-[400px] sm:max-w-[80px] md:max-w-[100px] sm:order-1">
+      <nav className="flex sm:flex-col gap-2 max-w-[400px] sm:max-w-[60px] sm:order-1">
         {CERTIFICATIONS.map(({ thumbnail, alt }, index) => (
           <div key={index}>
             <img
@@ -29,6 +22,7 @@ export default function GalleryCertification() {
               }`}
               src={thumbnail}
               alt={alt}
+              loading="lazy"
               onClick={() => handleClick(index)}
               role="button"
             />
