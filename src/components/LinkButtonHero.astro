@@ -3,7 +3,7 @@ const { id, class: classInput, type, href, arialLabel: ariaLabel } = Astro.props
 const className = `p-4 sm:p-6 flex w-fit items-center justify-center rounded hover:scale-105 ${classInput ? classInput : ""}`;
 ---
 
-<!-- h-full w-fit -->{
+{
   type === "button" ? (
     <button id={id} aria-label={ariaLabel} class={className}>
       <slot />
