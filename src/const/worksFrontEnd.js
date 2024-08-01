@@ -4,8 +4,8 @@ export const FRONTEND_WORKS = [
   {
     position: "Desarrollo web",
     company: "Atlántida Diving School",
-    date: "[01.2024 - 04.2024]",
-    description: `<span class="text-emphasis">Refactorización del sitio.</span> La primera versión la realicé de manera autodidacta en el año 2019 utilizando HTML, CSS, JavaScript y PHP.<br /> En esta ocasión, me concentré en optimizar el rendimiento, semántica, accesibilidad y SEO.`,
+    date: "[01.2024 - Presente]",
+    description: `<span class="text-emphasis">Refactorización del sitio y mantenimiento.</span> La primera versión la realicé de manera autodidacta en el año 2019 utilizando HTML, CSS, JavaScript y PHP.<br /> En esta ocasión, me concentré en optimizar el rendimiento, semántica, accesibilidad y SEO.`,
     descriptionImg: "/img/mockups/atlantida-diving-school-lighthouse.webp",
     descriptionImgAlt: "Resultado de la evaluación de Lighthouse en Chrome",
     tags: [TAGS.ASTRO, TAGS.HTML, TAGS.CSS, TAGS.SASS, TAGS.JAVASCRIPT, TAGS.TYPESCRIPT],

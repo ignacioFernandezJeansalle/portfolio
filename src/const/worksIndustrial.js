@@ -38,9 +38,9 @@ export const INDUSTRIAL_WORKS = [
       "Desarrollo de soluciones y software de PLC, desarrollo UX/UI en HMI/SCADA industriales.",
       "Supervisión de montaje, conexionado eléctrico y puesta en marcha de líneas de producción.",
       `Elaboré <span class="text-emphasis">librerías de componentes</span> de PLC.`,
-      "Stack tecnológico: Schneider Electric, Rockwell Automation, Siemens.",
       `Elaboré el <span class="text-emphasis">estándar de programación</span> del sector e impartí talleres de buenas prácticas de programación internos y a clientes.`,
-      `Elaboré el <span class="text-emphasis">procedimiento de ingeniería de software</span> del sector y se certificó conforme a las normativas ISO9001.`,
+      `Elaboré y certifiqué el <span class="text-emphasis">procedimiento de ingeniería de software</span> del sector conforme a las normativas ISO9001.`,
+      "Stack tecnológico: Schneider Electric, Rockwell Automation, Siemens.",
     ],
   },
   {
@@ -49,9 +49,9 @@ export const INDUSTRIAL_WORKS = [
     date: "[09.2009 - 06.2011]",
     tasks: [
       "Desarrollo de software de PLC y desarrollo UX/UI en HMI para Tenaris Siderca, Techint.",
-      "Stack tecnológico: Schneider Electric, Delphi.",
       "Participé en la elaboración del estándar de programación de PLC.",
       `Desarrollé el algoritmo de control de una línea de producción obteniendo un <span class="text-emphasis">700% de aumento de producción</span>.`,
+      "Stack tecnológico: Schneider Electric, Delphi.",
     ],
   },
   {
@@ -60,8 +60,8 @@ export const INDUSTRIAL_WORKS = [
     date: "[10.2007 - 09.2009]",
     tasks: [
       "Desarrollo de software de PLC y desarrollo UX/UI en HMI para Ford, Volkswagen y Toyota.",
-      "Stack tecnológico: Rockwell Automation.",
       "Elaboré librerías de componentes de PLC.",
+      "Stack tecnológico: Rockwell Automation.",
     ],
   },
 ];
