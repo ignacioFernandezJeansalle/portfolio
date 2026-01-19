@@ -1,8 +1,19 @@
 export const INDUSTRIAL_WORKS = [
   {
+    position: "Líder técnico",
+    company: "Prodigyo S.R.L.",
+    date: "[11.2025 - Presente]",
+    tasks: [
+      "Definición de criterios técnicos para el desarrollo de proyectos de automatización industrial.",
+      `Desarrollo de la <span class="text-emphasis">estandarización y la mejora continua</span>.`,
+      "Supervisión, acompañamiento y revisión de soluciones.",
+      "Investigación e incorporación de nuevas herramientas, tecnologías y metodologías.",
+    ],
+  },
+  {
     position: "Ingeniero especialista",
     company: "Siemens Mobility S.A.",
-    date: "[01.2023 - Presente]",
+    date: "[01.2023 - 10.2025]",
     tasks: [
       "Desarrollo de software de PLC y desarrollo UX/UI en SCADA para operación ferroviaria.",
       `Desarrollé un <span class="text-emphasis">software llave en mano multiplataforma</span>.`,
