@@ -44,16 +44,4 @@
   --color-cblue-800: #1115c2;
   --color-cblue-900: #171d98;
   --color-cblue-950: #0e0f58;
-
-  --animate-load-image: kf-opacity 200ms ease-in;
-
-  @keyframes kf-opacity {
-    0% {
-      opacity: 0.1;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
 }

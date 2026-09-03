@@ -4,7 +4,7 @@ import IconOpenMenu from "@/icons/IconOpenMenu.astro";
 import IconCloseMenu from "@/icons/IconCloseMenu.astro";
 ---
 
-<header class="fixed top-0 left-0 w-full h-24 z-10 bg-cblue-700">
+<header class="fixed top-0 left-0 w-full h-24 z-10 bg-cblue-700 animation-header-scroll">
   <nav class="max-w-5xl px-8 mx-auto h-full flex justify-between items-center text-slate-50">
     <a
       class="h-12 w-12 bg-[url('/img/profile-pic-yellow-300.webp')] bg-no-repeat bg-contain text-nowrap -indent-249.75 overflow-hidden"
@@ -34,7 +34,7 @@ import IconCloseMenu from "@/icons/IconCloseMenu.astro";
         }
       </ul>
 
-      <button id="navBtnClose" class="absolute top-9 right-8 hover:text-yellow-300 sm:hidden">
+      <button id="navBtnClose" class="absolute top-9 right-8 hover:text-yellow-300 sm:hidden animation-nav-btn-close">
         <IconCloseMenu />
       </button>
     </div>
@@ -46,7 +46,7 @@ import IconCloseMenu from "@/icons/IconCloseMenu.astro";
 </header>
 
 <style>
-  header {
+  .animation-header-scroll {
     animation: header-scroll 1s linear both;
     animation-timeline: scroll();
     animation-range: 0 100px;
@@ -54,11 +54,15 @@ import IconCloseMenu from "@/icons/IconCloseMenu.astro";
 
   @keyframes header-scroll {
     to {
-      @apply h-16 shadow shadow-cblue-800;
+      height: calc(var(--spacing) * 16);
+      box-shadow:
+        0 1px 3px 0 rgb(0 0 0 / 0.1),
+        0 1px 2px -1px rgb(0 0 0 / 0.1);
+      --tw-shadow-color: var(--color-cblue-800);
     }
   }
 
-  #navBtnClose {
+  .animation-nav-btn-close {
     animation: btn-close-scroll 1s linear both;
     animation-timeline: scroll();
     animation-range: 0 100px;
@@ -66,7 +70,7 @@ import IconCloseMenu from "@/icons/IconCloseMenu.astro";
 
   @keyframes btn-close-scroll {
     to {
-      @apply top-5;
+      top: calc(var(--spacing) * 5);
     }
   }
 </style>
