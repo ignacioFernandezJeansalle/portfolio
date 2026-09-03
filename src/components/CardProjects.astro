@@ -48,7 +48,7 @@ const {
     </ul>
   </div>
 
-  <div class="flex-shrink-0">
+  <div class="shrink-0">
     <img
       class="w-full md:w-[340px] min-[850px]:w-[400px] lg:w-[500px] h-auto aspect-video rounded"
       src={thumbnail}
@@ -59,10 +59,14 @@ const {
         <IconGithubRepo class="size-4" />
         <span>Repositorio</span>
       </LinkButton>
-      <LinkButton href={deploy} ariaLabel="Visitar la web" class="btn-secondary">
-        <IconLink class="size-4" />
-        <span>Web</span>
-      </LinkButton>
+      {
+        deploy && (
+          <LinkButton href={deploy} ariaLabel="Visitar la web" class="btn-secondary">
+            <IconLink class="size-4" />
+            <span>Web</span>
+          </LinkButton>
+        )
+      }
     </nav>
   </div>
 </article>
