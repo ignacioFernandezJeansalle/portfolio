@@ -1,5 +1,4 @@
 ---
-import "@fontsource-variable/jetbrains-mono"; // Supports weights 100-800
 import "@fontsource-variable/montserrat"; // Supports weights 100-900
 import "@fontsource/roboto/100.css";
 import "@fontsource/roboto/300.css";
@@ -7,6 +6,8 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "@fontsource/roboto/900.css";
+
+import "../styles/global.css";
 
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
@@ -35,36 +36,3 @@ const { title, description } = Astro.props;
     <Footer />
   </body>
 </html>
-
-<style is:global>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    scroll-margin-top: 16px;
-  }
-
-  body {
-    font-family: "Montserrat Variable", sans-serif, system-ui;
-  }
-
-  h1,
-  h2,
-  h3 {
-    /* font-family: "JetBrains Mono Variable", monospace; */
-    font-family: "Roboto", monospace;
-  }
-
-  .btn-primary {
-    @apply bg-cblue-500 text-slate-50 hover:text-slate-200;
-  }
-
-  .btn-secondary {
-    @apply bg-slate-50 text-cblue-700 hover:text-cblue-800 font-medium;
-  }
-
-  .text-emphasis {
-    @apply font-medium text-cblue-700;
-  }
-</style>
