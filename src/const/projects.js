@@ -12,6 +12,6 @@ export const PROJECTS = [
     thumbnail: "/img/mockups/black-and-store-coder-house.webp",
     thumbnailAlt: "Captura de pantalla del deploy del proyecto",
     repository: "https://github.com/ignacioFernandezJeansalle/CoderReactJSBlackandstore",
-    deploy: "https://coder-react-js-blackandstore.vercel.app/",
+    deploy: "",
   },
 ];

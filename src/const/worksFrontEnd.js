@@ -25,6 +25,6 @@ export const FRONTEND_WORKS = [
     thumbnail: "/img/mockups/sobrenatural-nutricion.webp",
     thumbnailAlt: "Captura de pantalla de la web de Sobrenatural Nutrición",
     repository: "https://github.com/ignacioFernandezJeansalle/web-sobrenatural",
-    deploy: "https://ignaciofernandezjeansalle.github.io/web-sobrenatural/",
+    deploy: "",
   },
 ];
